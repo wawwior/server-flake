@@ -10,14 +10,13 @@
   flake.diskoConfigurations.hermes = {
     disko = {
       devices = {
-        disk.primary = {
+        disk.vda = {
           device = "/dev/vda";
           type = "disk";
           content = {
             type = "gpt";
             partitions = {
               boot = {
-                name = "boot";
                 size = "1M";
                 type = "EF02";
               };
@@ -33,15 +32,14 @@
                 };
               };
               swap = {
-                size = "4G";
+                size = "100M";
                 content = {
                   type = "swap";
                   discardPolicy = "both";
                   resumeDevice = true;
                 };
               };
-              root = {
-                name = "root";
+              primary = {
                 size = "100%";
                 content = {
                   type = "lvm_pv";
