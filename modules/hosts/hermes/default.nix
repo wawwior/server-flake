@@ -5,6 +5,7 @@
     modules = with self.nixosModules; [
       hermes
       core
+      minecraft
     ];
   };
 
