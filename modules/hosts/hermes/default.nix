@@ -10,8 +10,5 @@
 
   flake.nixosModules.hermes = { ... }: {
     networking.hostName = "hermes";
-    swapDevices = [
-      # TODO: swap
-    ];
   };
 }
