@@ -12,5 +12,6 @@
   flake.nixosModules.hermes = { ... }: {
     networking.hostName = "hermes";
     hardware.facter.reportPath = ./facter.json;
+    nixpkgs.config.allowUnfree = true;
   };
 }
