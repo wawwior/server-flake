@@ -31,6 +31,9 @@
               server-port = 25565;
               motd = "cinnatastic! (hosted on NixOS :P)";
             };
+            operators = {
+              "Wawwior" = "7cb790ac-89f3-4557-a45b-864560a6864a";
+            };
           };
       };
     };
