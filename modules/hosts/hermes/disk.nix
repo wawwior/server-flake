@@ -1,4 +1,11 @@
-{ ... }: {
+{ self, inputs, ... }: {
+
+  flake.nixosModules.hermes = { ... }: {
+    imports = [
+      inputs.disko.nixosModules.disko
+      self.diskoConfigurations.hermes
+    ];
+  };
 
   flake.diskoConfigurations.hermes = {
     disko = {

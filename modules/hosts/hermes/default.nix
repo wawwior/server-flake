@@ -9,10 +9,6 @@
   };
 
   flake.nixosModules.hermes = { ... }: {
-    imports = [
-      inputs.disko.nixosModules.disko
-      self.diskoConfigurations.hermes
-    ];
     networking.hostName = "hermes";
     swapDevices = [
       # TODO: swap
