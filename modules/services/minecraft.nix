@@ -20,7 +20,7 @@
               pname = "cinnatastic-pack";
               version = "latest";
               url = "https://raw.githubusercontent.com/wawwior/cinnatastic/main/pack.toml";
-              packHash = "sha256-Q1wfK59ISwtUKJ+Jm+02/0xR68J8+Y9F9tYtxdQ9C6g=";
+              packHash = "sha256-scV1JO8eC13wJ/o4ctMOccf0BeZRzhFGqPcTtv36UGQ=";
             };
             inherit (inputs.nix-minecraft.lib) collectFilesAt;
           in
