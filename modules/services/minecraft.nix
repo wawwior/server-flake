@@ -32,6 +32,7 @@
             files = collectFilesAt pack "config";
             serverProperties = {
               server-port = 25565;
+              spawn-protection = 0;
               motd = "cinnatastic! (hosted on NixOS :P)";
             };
             operators = {
