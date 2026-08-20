@@ -32,7 +32,7 @@
                 };
               };
               swap = {
-                size = "100M";
+                size = "4G";
                 content = {
                   type = "swap";
                   discardPolicy = "both";
