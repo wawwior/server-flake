@@ -6,6 +6,9 @@
 
     nixpkgs.overlays = [ inputs.nix-minecraft.overlay ];
 
+    # simple voice chat port
+    networking.firewall.allowedUDPPorts = [ 24454 ];
+
     services.minecraft-servers = {
       enable = true;
       eula = true;
@@ -17,7 +20,7 @@
               pname = "cinnatastic-pack";
               version = "latest";
               url = "https://raw.githubusercontent.com/wawwior/cinnatastic/main/pack.toml";
-              packHash = "sha256-FB+14AluUCkqqoX6VykgGcRaCP9Fxa6rVIAWgNLIeSQ=";
+              packHash = "sha256-Fe5+Mql/Hf6hE/3O0B8xmOWiOC6Jxfh5Np8QeVDeeYQ=";
             };
             inherit (inputs.nix-minecraft.lib) collectFilesAt;
           in
