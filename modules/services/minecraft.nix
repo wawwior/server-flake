@@ -13,7 +13,7 @@
       enable = true;
       eula = true;
       openFirewall = true;
-      environmentFile = ''
+      environmentFile = pkgs.writeText ".env" ''
         PATH="${pkgs.git}/bin:${pkgs.git-lfs}/bin:$PATH"
       '';
       servers = {
