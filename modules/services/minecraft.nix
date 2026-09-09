@@ -13,6 +13,9 @@
       enable = true;
       eula = true;
       openFirewall = true;
+      environmentFile = ''
+        PATH="${pkgs.git}/bin:${pkgs.git-lfs}/bin:$PATH"
+      '';
       servers = {
         cinnatastic =
           let
