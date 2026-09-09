@@ -13,9 +13,6 @@
       enable = true;
       eula = true;
       openFirewall = true;
-      environmentFile = pkgs.writeText ".env" ''
-        PATH="${pkgs.git}/bin:${pkgs.git-lfs}/bin:$PATH"
-      '';
       servers = {
         cinnatastic =
           let
@@ -33,6 +30,10 @@
             package = pkgs.neoforgeServers.neoforge-1_21_1;
             symlinks = collectFilesAt pack "mods";
             files = collectFilesAt pack "config";
+            path = with pkgs; [
+              git
+              git-lfs
+            ];
             serverProperties = {
               server-port = 25565;
               spawn-protection = 0;
